@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Profile;
 public class AppConfig {
 
     @Bean
+    @Profile("rabbit")
     public Queue myQueue() {
         return new Queue("myQueue", false);
     }

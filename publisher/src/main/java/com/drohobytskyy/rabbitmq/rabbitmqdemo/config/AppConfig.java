@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class AppConfig {
 
-    @Bean(name = "httpClient")
+    @Bean
     @Profile("http")
     public HttpClient httpClient() {
         return HttpClient.newBuilder()
